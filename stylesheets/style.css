@@ -55,29 +55,35 @@ h3 {
 
 
 .inner {
-  padding: 20px;
+  padding: 20px 20px 20px 0;
 }
 
 #main {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .main-block {
 /*  width: 33%;*/
-  float: left;
+/*  float: left;*/
   background: #fff;
 }
 
 .main-block-inner {
   background: #fafafa;
-  padding: 90px 20px 0 20px;
-  margin: 0 20px;
-  min-height: 120px;
+/*  padding: 90px 20px 0 20px;*/
+/*  margin: 0 20px;
+  min-height: 120px;*/
   color: #2e2e2e;
   text-align: center;
+  padding: 10px 5px;
+  
+}
+
+.main-block-inner:hover {
+  background: #E0F2F7;
 }
 
 #bottom-container {
@@ -91,7 +97,8 @@ h3 {
 }
 
 #web_development, #web_design, #about_me {
-  width: 33%;
+  width: 200px;
+
 }
 
 #web_development:hover, #web_design:hover, #about_me:hover {
@@ -103,13 +110,16 @@ h3 {
 }
 
 .close-me {
-  top: -10px;
-  right: 20px;
+/*  top: -10px;
+  right: 20px;*/
   width: 50px;
   height: 20px;
-  background: red;
+  background: #FE2E2E;
+  color: #fff;
+  font-weight:bold;
   position: absolute;
   display:none;
+  z-index:99999;
 }
 
 .close-me:hover {
