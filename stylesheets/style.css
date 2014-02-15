@@ -7,7 +7,7 @@ body, html {
 }
 
 a {
-  color: #519FB4;
+  color: #C9007A;
   text-decoration: none;
 }
 
@@ -53,9 +53,14 @@ h3 {
   font-weight: normal;
 }
 
+h4 {
+  font-size: 20px;
+}
+
 
 #container {
   width: 85%;
+  max-width: 1200px;
   margin: 0 auto;
   height: 100%;
   color: #2e2e2e;
@@ -77,7 +82,8 @@ h3 {
 
 .intro {
   position: absolute;
-  width: 60%;
+  width: 550px;
+  text-align: justify;
   left: 280px;
   top:0;
   z-index:9999;
@@ -90,31 +96,40 @@ h3 {
 }
 
 .main-block {
-/*  width: 33%;*/
-/*  float: left;*/
   background: #fff;
 }
 
 .main-block-inner {
   background: #000;
-/*  padding: 90px 20px 0 20px;*/
-/*  margin: 0 20px;
-  min-height: 120px;*/
   color: #fff;
-  text-align: center;
   padding: 10px 5px;
   
 }
 
+.main-block-inner h3 {
+  text-align: center;
+}
+
 .main-block-inner h2 {
-  margin: 30px 0;
+  margin: 40px 30px 40px 0;
   font-size: 22px;
   font-weight: bold;
   color: #000;
+  text-align: left;
+  height: 2px;
+  background: #000;
+}
+
+.main-block-inner h2 span {
+  background: #FFFC00;
+  position: relative;
+  bottom: 12px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .main-block-inner:hover {
-  background: yellow;
+  background: #FFFC00;
   color: #000;
 }
 
@@ -134,7 +149,7 @@ h3 {
 }
 
 #portfolio:hover, #resume:hover, #about_me:hover {
-  cursor: pointer;
+  cursor: arrow;
 }
 
 #portfolio_inner, #resume_inner, #about_me_inner {
@@ -142,19 +157,18 @@ h3 {
 }
 
 .close-me {
-/*  top: -10px;
-  right: 20px;*/
   width: 50px;
   height: 20px;
-  font-size:13px;
+  font-size:14px;
   text-align:center;
-  color: #EB1831;
-  font-weight:bold;
+  color: #FFFC00;
+  background: #000;
   position: absolute;
   display:none;
   z-index:99999;
-  right:5px;
-  top: 5px;
+  right:0;
+  top: 0;
+  line-height: 19px;
 }
 
 .close-me:hover {
@@ -180,7 +194,7 @@ h3 {
 /* close commented backslash hack */
 
 .feature {
-  background: yellow;
+  background: #FFFC00;
   padding: 30px 20px;
   color: #000;
   overflow: auto;
@@ -189,10 +203,79 @@ h3 {
 .tri {
   width: 33%;
   float: left;
+  margin: 0 0 30px 0;
 }
 
 .tri-inner {
-  margin: 10px;
-  background: #fff;
-  min-height: 200px;
+  margin: 10px 20px;
+  text-align: left;
+  position: relative;
+}
+
+.tri-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.tri-inner p {
+  font-size: 14px;
+}
+
+.links {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size:20px;
+}
+
+.links a {
+  color: #000;
+  margin: 0 0 0 4px;
+}
+
+.links a:hover {
+  color: #C9007A;
+}
+
+.fa.fa-external-link {
+  position: relative;
+  top: 1px;
+}
+
+.content {
+  display: none;
+}
+
+.resume-block {
+  width: 60%;
+  margin: 0 0 0 40px;
+}
+.resume-block ul {
+  width: 70%;
+}
+.resume-block ul li {
+  margin: 0 0 8px 0;
+}
+
+.resume-block p {
+  margin: 0 0 20px 0;
+  line-height: 22px;
+}
+
+.it {
+  font-style: italic;
+}
+
+@media (max-width: 950px) {
+
+  .tri {
+  width: 100%;
+  float: left;
+  margin: 0 0 30px 0;
+  }
+
+  .tri p {
+    font-size: 16px;
+  }
+
 }
