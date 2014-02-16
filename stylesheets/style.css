@@ -54,7 +54,7 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -245,12 +245,12 @@ h4 {
 }
 
 .resume-block {
-  width: 60%;
+  width: 80%;
   margin: 0 0 0 40px;
   display: none;
 }
 .resume-block ul {
-  width: 70%;
+  width: 80%;
 }
 .resume-block ul li {
   margin: 0 0 8px 0;

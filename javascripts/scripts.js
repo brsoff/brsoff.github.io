@@ -8,8 +8,6 @@ var site = {
         $about_me = $("#about_me");
         $intro = site.content.intro();
 
-        
-
         var initial_page_width = $body.width();
 
         if (initial_page_width <= 535) {
