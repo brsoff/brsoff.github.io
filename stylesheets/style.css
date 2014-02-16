@@ -287,7 +287,11 @@ header {
   width: 200px;
 }
 
-.width-full {
+.width100 {
+  width: 100px;
+}
+
+.widthfull {
   width: 100%;
 }
 
@@ -329,6 +333,24 @@ header {
 
   .intro {
     width: 200px;
+  }
+
+  .intro p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+}
+
+@media (max-width: 535px) {
+
+/*  .main-block {
+    width: 100px;
+  }*/
+
+  .intro {
+    width: 200px;
+    left: 150px;
   }
 
   .intro p {

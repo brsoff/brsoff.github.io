@@ -8,11 +8,36 @@ var site = {
         $about_me = $("#about_me");
         $intro = site.content.intro();
 
+        
+
+        var initial_page_width = $body.width();
+
+        if (initial_page_width <= 535) {
+            $(".main-block").addClass("width100");
+        }else{
+            $(".main-block").addClass("width200");
+        }
+
         $main.prepend($intro);
 
         site.listeners.portfolioListener();
         site.listeners.resumeListener();
         site.listeners.aboutMeListener();
+
+        site.resizer.initialize();
+    },
+
+    resizer: {
+        initialize: function () {
+            $(window).resize(function () {
+                console.log("resized")
+                if ($(window).width() <= 535) {
+                $(".main-block").switchClass("width200", "width100", "fast");
+                }else{
+                $(".main-block").switchClass("width100", "width200", "fast");
+                }   
+            });
+        }
     },
 
     listeners: {
@@ -47,7 +72,13 @@ var site = {
     animateDiv: function (active_div) {
 
             $intro.fadeOut("fast");
-            active_div.animate({ "width": "100%" }, 100);
+
+            if ($(window).width() <= 535) {
+                active_div.switchClass("width100", "widthfull", 100);
+            }else{
+                active_div.switchClass("width200", "widthfull", 100);
+            }   
+
             var $inner_div = active_div.find('.main-block-inner');
             var $h2 = $inner_div.find("h3");
             $inner_div.animate({ "height": "auto" }, 100);
@@ -67,7 +98,15 @@ var site = {
     closeListener: function (open_div, close_div) {
 
         close_div.off("click").on("click", function () {
-            open_div.animate({ "width": "200px" }, 100);
+
+            // var page_width = $(window).width();
+
+            if ($(window).width() <= 535) {
+                open_div.switchClass("widthfull", "width100", 100);
+                }else{
+                open_div.switchClass("widthfull", "width200", 100);
+            }   
+
             $content_div = open_div.find('.content');
             $content_div.hide();
             var $inner_div = open_div.find('.main-block-inner');
@@ -76,11 +115,7 @@ var site = {
             var $h2 = $inner_div.find("h3");
             $h2.css({"font-size":"16px"});
 
-            if ( $(".open")[0] ) {
-                
-            }else{
-                $intro.fadeIn();
-            }
+            if ( !$(".open")[0] ) { $intro.fadeIn(); }
 
             $(this).remove();
 
