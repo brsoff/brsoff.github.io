@@ -76,7 +76,7 @@ var site = {
             var $h2 = $inner_div.find("h3");
             $h2.css({"font-size":"16px"});
 
-            if ( ($portfolio.hasClass("open")) || ($resume.hasClass("open")) || ($about_me.hasClass("open")) ) {
+            if ( $(".open")[0] ) {
                 
             }else{
                 $intro.fadeIn();

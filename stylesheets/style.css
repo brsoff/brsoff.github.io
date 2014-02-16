@@ -82,15 +82,15 @@ h4 {
 
 .intro {
   position: absolute;
-  width: 550px;
+  width: 500px;
   text-align: justify;
-  left: 280px;
+  left: 250px;
   top:0;
   z-index:9999;
 }
 
 .intro p {
-  font-size:20px;
+  font-size:18px;
   margin: 0 0 20px 0;
   line-height:26px;
 }
@@ -100,10 +100,9 @@ h4 {
 }
 
 .main-block-inner {
-  background: #000;
-  color: #fff;
+  background: #f7f7f7;
+  color: #000;
   padding: 10px 5px;
-  
 }
 
 .main-block-inner h3 {
@@ -144,7 +143,6 @@ h4 {
 }
 
 #portfolio, #resume, #about_me {
-  width: 200px;
 
 }
 
@@ -161,13 +159,13 @@ h4 {
   height: 20px;
   font-size:14px;
   text-align:center;
-  color: #FFFC00;
+  color: #fff;
   background: #000;
   position: absolute;
   display:none;
   z-index:99999;
-  right:0;
-  top: 0;
+  right:5px;
+  top: -20px;
   line-height: 19px;
 }
 
@@ -267,6 +265,32 @@ h4 {
   font-style: italic;
 }
 
+#header-links {
+  position: absolute;
+  top:0;
+  right:0;
+  font-size: 14px;
+  text-align: right;
+  color: #777676;
+}
+
+#header-links a {
+  color: #777676;
+}
+
+header {
+  position: relative;
+  max-width:750px;
+}
+
+.width200 {
+  width: 200px;
+}
+
+.width-full {
+  width: 100%;
+}
+
 @media (max-width: 950px) {
 
   .tri {
@@ -277,6 +301,38 @@ h4 {
 
   .tri p {
     font-size: 16px;
+  }
+
+}
+
+@media (max-width: 835px) {
+
+  .intro {
+    width: 400px;
+  }
+
+}
+
+@media (max-width: 735px) {
+
+  .intro {
+    width: 300px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 620px) {
+
+  .intro {
+    width: 200px;
+  }
+
+  .intro p {
+    font-size: 14px;
   }
 
 }
