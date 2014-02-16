@@ -84,7 +84,7 @@ var site = {
             $content_div = $inner_div.find('.content');
             
             $h2.animate({"font-size":"32px"});
-            var $close_div = $("<div>").addClass("close-me").text("close")
+            var $close_div = $("<div>").addClass("close-me").html("close")
             active_div.parent().prepend($close_div);
             $close_div.fadeIn();
 
