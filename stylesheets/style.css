@@ -344,7 +344,8 @@ header {
 @media (max-width: 620px) {
 
   .intro {
-    width: 200px;
+    width: 300px;
+    left: 150px;
   }
 
   .intro p {
@@ -362,11 +363,6 @@ header {
 
   .intro {
     width: 200px;
-    left: 150px;
-  }
-
-  .intro p {
-    font-size: 14px;
   }
 
 }
