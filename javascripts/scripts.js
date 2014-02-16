@@ -30,6 +30,7 @@ var site = {
                 console.log("resume clicked")
                 var me = $(this)
                 site.animateDiv(me);
+                site.resume.initialize();
             });
         },
 
@@ -46,11 +47,11 @@ var site = {
     animateDiv: function (active_div) {
 
             $intro.fadeOut("fast");
-            active_div.animate({ "width": "100%" }, "fast");
+            active_div.animate({ "width": "100%" }, 100);
             var $inner_div = active_div.find('.main-block-inner');
             var $h2 = $inner_div.find("h3");
-            $inner_div.animate({ "height": "auto" });
-            $inner_div.addClass("feature")
+            $inner_div.animate({ "height": "auto" }, 100);
+            $inner_div.addClass("open")
             $content_div = $inner_div.find('.content');
             
             $h2.animate({"font-size":"32px"});
@@ -66,16 +67,17 @@ var site = {
     closeListener: function (open_div, close_div) {
 
         close_div.off("click").on("click", function () {
-            open_div.css({ "width": "200px" });
+            open_div.animate({ "width": "200px" }, 100);
             $content_div = open_div.find('.content');
             $content_div.hide();
             var $inner_div = open_div.find('.main-block-inner');
-            $inner_div.removeClass("feature");
-            $inner_div.css({ "height": "auto" });
+            $inner_div.removeClass("open");
+            $inner_div.animate({ "height": "auto" }, 100);
             var $h2 = $inner_div.find("h3");
             $h2.css({"font-size":"16px"});
 
-            if ( ($portfolio.css("width") != "200px") || ($resume.css("width") != "200px") || ($about_me.css("width") != "200px") ) {
+            if ( ($portfolio.hasClass("open")) || ($resume.hasClass("open")) || ($about_me.hasClass("open")) ) {
+                
             }else{
                 $intro.fadeIn();
             }
@@ -86,6 +88,7 @@ var site = {
                 site.listeners.portfolioListener();
             }else if (open_div.attr('id') === "resume") {
                 site.listeners.resumeListener();
+                site.resume.turnOffListener();
             }else if (open_div.attr('id') === "about_me") {
                 site.listeners.aboutMeListener();
             }else{
@@ -93,6 +96,28 @@ var site = {
             }
 
         });
+
+    },
+
+
+    resume: {
+
+        initialize: function () {
+            site.resume.listener();
+        },
+
+        listener: function () {
+            $resume.on("click", "h2", function () {
+                console.log("h2 clicked");
+                $resume.find('.resume-block').hide();
+                $(this).next('.resume-block').show();
+            })
+        },
+
+        turnOffListener: function () {
+            $resume.find('.resume-block').hide();
+            $resume.off("click", "h2");
+        }
 
     },
 

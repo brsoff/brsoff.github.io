@@ -193,7 +193,7 @@ h4 {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-.feature {
+.open {
   background: #FFFC00;
   padding: 30px 20px;
   color: #000;
@@ -249,6 +249,7 @@ h4 {
 .resume-block {
   width: 60%;
   margin: 0 0 0 40px;
+  display: none;
 }
 .resume-block ul {
   width: 70%;
