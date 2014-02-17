@@ -165,7 +165,7 @@ h4 {
   text-align:center;
   padding:3px;
   color: #fff;
-  background: #000;
+  background: #FF3500;
   position: absolute;
   display:none;
   z-index:99999;
@@ -226,6 +226,7 @@ h4 {
 
 .tri-inner p {
   font-size: 14px;
+  padding: 0 !important;
 }
 
 .links {
@@ -253,21 +254,31 @@ h4 {
   display: none;
 }
 
+.content p {
+  padding: 0 0 0 20px;
+}
+
 .resume-block {
-  width: 80%;
-  margin: 0 0 0 40px;
+  width: 100%;
+  margin: 0;
   display: none;
 }
 .resume-block ul {
   width: 80%;
+  list-style-type: square;
 }
 .resume-block ul li {
   margin: 0 0 8px 0;
+  font-size: 14px;
 }
 
 .resume-block p {
   margin: 0 0 8px 0;
   line-height: 22px;
+}
+
+.resume-block h4 {
+  margin: 25px 0 3px 0;
 }
 
 .it {
@@ -306,6 +317,10 @@ header {
 
 .mt40 {
   margin-top: 40px;
+}
+
+.ml25 {
+  margin: 0 0 0 25px;
 }
 
 
