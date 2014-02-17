@@ -7,7 +7,6 @@ var site = {
         $resume = $("#resume");
         $about_me = $("#about_me");
         $intro = site.content.intro();
-
         var initial_page_width = $body.width();
 
         if (initial_page_width <= 605) {
@@ -21,14 +20,14 @@ var site = {
         site.listeners.portfolioListener();
         site.listeners.resumeListener();
         site.listeners.aboutMeListener();
-
         site.resizer.initialize();
     },
 
     resizer: {
+
         initialize: function () {
             $(window).resize(function () {
-                console.log("resized")
+                // console.log("resized")
                 if ($(window).width() <= 605) {
                 $(".main-block").switchClass("width200", "width100", "fast");
                 }else{
@@ -36,13 +35,14 @@ var site = {
                 }   
             });
         }
+
     },
 
     listeners: {
 
         portfolioListener: function () {
             $body.one("click", "#portfolio", function () {
-                console.log("portfolio clicked")
+                // console.log("portfolio clicked")
                 var me = $(this)
                 site.animateDiv(me);
             });
@@ -50,7 +50,7 @@ var site = {
 
         resumeListener: function () {
             $body.one("click", "#resume", function () {
-                console.log("resume clicked")
+                // console.log("resume clicked")
                 var me = $(this)
                 site.animateDiv(me);
                 site.resume.initialize();
@@ -59,7 +59,7 @@ var site = {
 
         aboutMeListener: function () {
             $body.one("click", "#about_me", function () {
-                console.log("about me clicked")
+                // console.log("about me clicked")
                 var me = $(this)
                 site.animateDiv(me);
             });
@@ -97,8 +97,6 @@ var site = {
 
         close_div.off("click").on("click", function () {
 
-            // var page_width = $(window).width();
-
             if ($(window).width() <= 605) {
                 open_div.switchClass("widthfull", "width100", 100);
                 }else{
@@ -113,7 +111,7 @@ var site = {
             var $h2 = $inner_div.find("h3");
             $h2.css({"font-size":"16px"});
 
-            if ( !$(".open")[0] ) { $intro.fadeIn(); }
+            if ( !$(".open")[0] ) { $intro.fadeIn(); } // if there isn't a .open div on the page
 
             $(this).remove();
 
@@ -124,14 +122,11 @@ var site = {
                 site.resume.turnOffListener();
             }else if (open_div.attr('id') === "about_me") {
                 site.listeners.aboutMeListener();
-            }else{
-                console.log("(._. )")
             }
 
         });
 
     },
-
 
     resume: {
 
@@ -141,7 +136,6 @@ var site = {
 
         listener: function () {
             $resume.on("click", "h2", function () {
-                console.log("h2 clicked");
                 $resume.find('.resume-block').hide();
                 $(this).next('.resume-block').show();
             })
@@ -158,7 +152,7 @@ var site = {
     content: {
 
       intro: function () {
-        var intro =  $("<div>").addClass("intro").html("<img src='./images/brsoff.png' /><p>Hello! My name is Brendan and I'm a web developer and designer in New York.</p><p>I work primarily with Ruby on Rails, Javascript and jQuery, and have significant experience with Wordpress, Magento, Shopify and many more CMS's and frameworks.</p><p>Check out the menu to the left to see some of the neat stuff I've completed, visit my <a href=http://www.github.com/brsoff>github</a> or shoot me an email at brsoff@gmail.com.</p>");
+        var intro =  $("<div>").addClass("intro").html("<img src='./images/brsoff.png' /><p>Hello! My name is Brendan and I'm a web developer and designer in New York.</p><p>I work primarily with Ruby on Rails, Javascript and jQuery, and have significant experience with Wordpress, Magento, Shopify and many more CMS's and frameworks.</p><p>When I'm not in front of a computer, I like to travel, learn foreign languages, keep up with world news, do crosswords, play guitar, watch <em>Jeopardy!</em> and try new foods.</p><p>Check out the menu to the left to see some of the neat stuff I've completed, visit my <a href=http://www.github.com/brsoff>github</a> or shoot me an email at brsoff@gmail.com.</p>");
 
         return intro;
       }
