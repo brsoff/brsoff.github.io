@@ -7,11 +7,11 @@ body, html {
 }
 
 body {
-  border-top: 2px solid #C9007A;
+  border-top: 2px solid #0AA4F0;
 }
 
 a {
-  color: #C9007A;
+  color: #0AA4F0;
   text-decoration: none;
 }
 
@@ -34,6 +34,8 @@ body {
   border-top: 1px solid #fafafa;
   background: #fff;
   z-index: 9999;
+
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,7 +89,7 @@ h4 {
 .intro {
   position: absolute;
   width: 500px;
-  text-align: justify;
+  /*text-align: justify;*/
   left: 250px;
   top:0;
   z-index:9999;
@@ -95,16 +97,26 @@ h4 {
 
 .intro p {
   font-size:16px;
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
   line-height:22px;
 }
 
+.intro img {
+  height:146px;
+  float: left;
+  margin: 0 12px 12px 0;
+}
+
 .main-block {
-  background: #fff;
+  background: #f7f7f7;
+  position: relative;
+}
+
+.main-block:hover {
+  background:#EFF9FD;;
 }
 
 .main-block-inner {
-  background: #f7f7f7;
   color: #000;
   padding: 10px 5px;
 }
@@ -115,30 +127,30 @@ h4 {
 
 .main-block-inner h2 {
   margin: 40px 30px 40px 0;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   color: #000;
   text-align: left;
   height: 2px;
- /* background: #000;*/
+  border-bottom: 1px dotted #9BD9F8;
 }
 
 .main-block-inner h2 span {
-  background: #FEFDED;
+  background: #EFF9FD;
   position: relative;
-  bottom: 12px;
+  bottom: 14px;
   padding-right: 20px;
   padding-left: 20px;
 }
 
 .main-block-inner h2 span:hover {
-  color: #C9007A;
+  color: #0AA4F0;
   cursor: pointer;
 }
 
 .main-block-inner:hover {
-  background: #FEFDED;
-  color: #000;
+ /* background: #F7FE2E;;*/
+ /* color: #000;*/
 }
 
 #bottom-container {
@@ -151,31 +163,29 @@ h4 {
   font-size: 14px;
 }
 
-#portfolio, #resume, #about_me {
 
-}
 
 #portfolio:hover, #resume:hover, #about_me:hover {
   cursor: arrow;
 }
+
 
 #portfolio_inner, #resume_inner, #about_me_inner {
   position: relative;
 }
 
 .close-me {
-  width: 50px;
-  height: 20px;
   font-size:14px;
   text-align:center;
+  padding:3px;
   color: #fff;
-  background: #C9007A;
+  background: #000;
   position: absolute;
   display:none;
   z-index:99999;
-  right:0px;
-  top: -20px;
-  line-height: 19px;
+  right:-8px;
+  top: -12px;
+  line-height: 14px;
 }
 
 .close-me:hover {
@@ -201,7 +211,8 @@ h4 {
 /* close commented backslash hack */
 
 .open {
-  background: #FEFDED;
+  background: #EFF9FD;
+  border-top:1px dotted #9BD9F8;
   padding: 30px 20px;
   color: #000;
   overflow: auto;
@@ -222,9 +233,9 @@ h4 {
 .tri-inner img {
   width: 100%;
   height: auto;
-  box-shadow: 2px 2px 3px #FCFBBD;
-  -moz-box-shadow: 2px 2px 3px #FCFBBD;
-  -webkit-box-shadow: 2px 2px 3px #FCFBBD;
+  box-shadow: 2px 2px 3px #ccc;
+  -moz-box-shadow: 2px 2px 3px #ccc;
+  -webkit-box-shadow: 2px 2px 3px #ccc;
 }
 
 .tri-inner p {
@@ -244,7 +255,7 @@ h4 {
 }
 
 .links a:hover {
-  color: #C9007A;
+  color: #0AA4F0;
 }
 
 .fa.fa-external-link {
@@ -306,6 +317,11 @@ header {
 .widthfull {
   width: 100%;
 }
+
+.mt40 {
+  margin-top: 40px;
+}
+
 
 @media (max-width: 950px) {
 

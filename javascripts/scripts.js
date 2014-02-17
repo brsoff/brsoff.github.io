@@ -84,7 +84,7 @@ var site = {
             $content_div = $inner_div.find('.content');
             
             $h2.animate({"font-size":"32px"});
-            var $close_div = $("<div>").addClass("close-me").html("close")
+            var $close_div = $("<div>").addClass("close-me").html("X")
             active_div.parent().prepend($close_div);
             $close_div.fadeIn();
 
@@ -158,7 +158,7 @@ var site = {
     content: {
 
       intro: function () {
-        var intro =  $("<div>").addClass("intro").html("<p>Hello! My name is Brendan and I'm a web developer and designer in New York.</p><p>I work primarily with Ruby on Rails, Javascript and jQuery, and have significant experience with Wordpress, Magento, Shopify and many more CMS's and frameworks.</p><p>Check out the menu to the left to see some of the neat stuff I've completed or visit my <a href=http://www.github.com/brsoff>github</a>.</p><p>Also, don't hesitate to send me an email at brsoff at gmail.</p>");
+        var intro =  $("<div>").addClass("intro").html("<img src='./images/brsoff.png' /><p>Hello! My name is Brendan and I'm a web developer and designer in New York.</p><p>I work primarily with Ruby on Rails, Javascript and jQuery, and have significant experience with Wordpress, Magento, Shopify and many more CMS's and frameworks.</p><p>Check out the menu to the left to see some of the neat stuff I've completed, visit my <a href=http://www.github.com/brsoff>github</a> or shoot me an email at brsoff@gmail.com.</p>");
 
         return intro;
       }
