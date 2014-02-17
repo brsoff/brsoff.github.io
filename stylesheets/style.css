@@ -148,7 +148,7 @@ h4 {
   font-size: 14px;
 }
 
-#portfolio:hover, #resume:hover, #about_me:hover {
+#portfolio, #resume, #about_me {
   cursor: pointer;
 }
 
