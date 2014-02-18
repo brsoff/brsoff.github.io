@@ -9,7 +9,7 @@ var site = {
         $intro = $("#intro");
         var initial_page_width = $body.width();
 
-        if (initial_page_width <= 605) {
+        if (initial_page_width <= 620) {
             $(".main-block").addClass("width100");
         }else{
             $(".main-block").addClass("width200");
@@ -25,7 +25,7 @@ var site = {
 
         initialize: function () {
             $(window).resize(function () {
-                if ($(window).width() <= 605) {
+                if ($(window).width() <= 620) {
                 $(".main-block").switchClass("width200", "width100", "fast");
                 }else{
                 $(".main-block").switchClass("width100", "width200", "fast");
@@ -67,7 +67,7 @@ var site = {
 
             $intro.fadeOut("fast");
 
-            if ($(window).width() <= 605) {
+            if ($(window).width() <= 620) {
                 active_div.switchClass("width100", "widthfull", 100);
             }else{
                 active_div.switchClass("width200", "widthfull", 100);
@@ -80,7 +80,7 @@ var site = {
             $content_div = $inner_div.find('.content');
             
             $h2.animate({"font-size":"32px"});
-            var $close_div = $("<div>").addClass("close-me").html("X")
+            var $close_div = $("<div>").addClass("close-me").html("close")
             active_div.parent().prepend($close_div);
             $close_div.fadeIn();
 
@@ -95,7 +95,7 @@ var site = {
 
             open_div.addClass("pointer-me");
 
-            if ($(window).width() <= 605) {
+            if ($(window).width() <= 620) {
                 open_div.switchClass("widthfull", "width100", 100);
                 }else{
                 open_div.switchClass("widthfull", "width200", 100);
