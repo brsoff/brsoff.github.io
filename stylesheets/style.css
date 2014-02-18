@@ -323,6 +323,10 @@ header {
   margin: 0 0 0 25px;
 }
 
+.red {
+  color: #FF3500;
+}
+
 
 @media (max-width: 950px) {
 
